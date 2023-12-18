@@ -1,1 +1,1 @@
-# SML2023
+Excercises and projects from Statistical Machine Learning, University of Warsaw
