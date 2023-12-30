@@ -34,3 +34,52 @@ This simplifies to $$E[f(n+1)]=2E[f(n)]+2$$.
 This recursion can be solved easily and yields E[f(n)]=2 n+1 −2. Therefore, on average, you need to flip a fair coi $2^{n+1} −$2 times to get 5 heads in a row.
 
 ## Task 2: 
+On average, how many times must a 6-sided die be rolled until the sequence of 
+65 (i.e. a 6 followed by a 5) appears?
+
+There are three possibilities once we roll a 
+6: (a) we roll a 5, 
+(b) we roll a 6, or 
+(c) we start all over again.
+
+Let E be the expected number of rolls until 65 and let E6 be the expected number of rolls until 
+65 when we start with a rolled 6. Then, we can set up two linear equations based on these expectations.
+
+$$E = 1 + 1/6 E6 + 5/6 E$$
+
+$$E6 = 1 + 1/6 E6 + 4/6 E$$
+
+$$E = 6 + E6, E6 = 30$$
+
+## Task 3: Let $X_i$ be IID random variables with uniform distribution between 0 and 1. What are the cumulative distribution function, the probability density function and expected value of 
+$Z_n=max(X1, X2, ...,Xn)$? What are the cumulative distribution function, the probability density function and expected value of $Y_n=min(X 1,X2,...,X_n)$? 
+
+
+$$ P(Z_n \leq y) = F_{Z_n}(y) = y^n $$
+
+So:
+
+$$ p_{Z_n}(y) = (y^n)' = n y^{n-1} $$
+
+And:
+
+$$EX(Z_n) = \integral_0^1 y p_{Z_n}(y) dy = \integral_0^1 (n y^{n}) dy = \frac{n}{n+1}$$
+
+$$ P(Y_n \geq y) = F_{Y_n}(y) = (1 - y)^n $$
+So:
+$$ p_{Y_n}(y) = (y^n)' = n (1 -y)^{n-1} $$
+
+$$EX(Y_n) = \integral_0^1 y p_{Y_n}(y) dy = \integral_0^1 y n (1 -y)^{n-1} dy = 
+n\integral_0^1 (1-x) x^{n-1} dx = n (1/n 1^n - 0 - 1/(n+1) 1^{n+1} + 0) = \frac{1}{n+1}$$
+
+
+## Task 4: You are given a rooted tree with n nodes. On each step, you randomly choose a node and remove the subtree rooted by that node and the node itself; until all of them have been removed (that is, the root has been chosen). Find the expected number of steps in this proces
+
+P(xi chosen) = 1/sot
+
+P(xi will be removed) = depth / sot (to remove vertex needs to be an ancestor)
+
+EX(xi chosen) = 1/sot + 2 * 1/(sot-1) * (sot-d)/sot + 3 * 1/(sot-2)*(sot-d)^2/sot / (sot-1) =
+1/sot (1 + )
+
+
