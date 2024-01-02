@@ -73,13 +73,27 @@ $$EX(Y_n) = \integral_0^1 y p_{Y_n}(y) dy = \integral_0^1 y n (1 -y)^{n-1} dy =
 n\integral_0^1 (1-x) x^{n-1} dx = n (1/n 1^n - 0 - 1/(n+1) 1^{n+1} + 0) = \frac{1}{n+1}$$
 
 
-## Task 4: You are given a rooted tree with n nodes. On each step, you randomly choose a node and remove the subtree rooted by that node and the node itself; until all of them have been removed (that is, the root has been chosen). Find the expected number of steps in this proces
+## Task 4: You are given a rooted tree with n nodes. On each step, you randomly choose a node and remove the subtree rooted by that node and the node itself; until all of them have been removed (that is, the root has been chosen). Find the expected number of steps in this proces. sot = size of tree
 
 P(xi chosen) = 1/sot
 
 P(xi will be removed) = depth / sot (to remove vertex needs to be an ancestor)
 
-EX(xi chosen) = 1/sot + 2 * 1/(sot-1) * (sot-d)/sot + 3 * 1/(sot-2)*(sot-d)^2/sot / (sot-1) =
-1/sot (1 + )
+P(xi chosen | xi will be removed) = P(xi chosen and xi will be removed) / P(xi will be removed) = 1/sot * sot/depth = 1 / depth
+
+In the end all vertices will be removed, so:
+
+$$EX(xi chosen) = P(xi chosen | xi will be removed) = 1 / depth$$
+
+So:
+
+$$EX = \sum 1/depth$$
+
+## Task 5: Is rolling a non-fair die has a greater probability of rolling doubles than rolling a fair die?
+
+## Task 6: You are given a chessboard with 8x8 dimensions. Your friend asks you how many ways there are to place coins on the chessboard such that there are even number of coins in each row and in each column. Can you find it out?
+
+## Task 7: 
+
 
 
